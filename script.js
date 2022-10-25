@@ -87,3 +87,18 @@ function questionTime() {
     displayQuestion();
     
 };
+
+function timerFunction(){
+    timerCount--;
+    timer.innerText = timerCount;
+    if (timerCount <= 0){
+        endQuiz();
+    }
+}
+
+function timerCheck() {
+    if (timerCount <= 0) {
+        clearInterval(timer);
+        endQuiz();
+    }
+}
