@@ -4,6 +4,6 @@
 
 Code Quiz! Press start quiz to quiz it up!
 
-<img src="assets/images/Capture.png">
-<img src="assets/images/Capture2.png">
-<img src="assets/images/Capture3.png">
+<img src="assets/images/Capture.PNG">
+<img src="assets/images/Capture2.PNG">
+<img src="assets/images/Capture3.PNG">
