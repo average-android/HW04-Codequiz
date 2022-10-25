@@ -102,3 +102,35 @@ function timerCheck() {
         endQuiz();
     }
 }
+
+function compare(event) {
+    if(event.target.innerText === questionArray[currentQuestion].correct) { 
+      timer.innerText = timerCount;
+      score++;
+      console.log("Correct");
+    }
+    if(event.target.innerText !== questionArray[currentQuestion].correct){
+        timerCount= timerCount - 20;
+        timer.innerText = timerCount;
+        console.log("Incorrect");
+    }
+    currentQuestion++;
+    timerCheck();
+    if(currentQuestion < questionArray.length) displayQuestion();
+    else endQuiz();
+
+}  
+
+function endQuiz() {
+    clearInterval(countdown)
+    clearInterval(timerCount)
+    var initials = prompt("Please put in your name.");
+    if (initials != null) {
+    
+    initials += "'s score = ";
+    initials += score;
+    leaderBoard.innerHTML = initials;
+    }
+    
+}
+startBtn.addEventListener("click", questionTime);
